@@ -20,6 +20,28 @@
 // Input: nums = [3,3], target = 6
 // Output: [0,1]
 
-function twoSums(nums, target){
+nums = [2,7,11,15]
+target = 9
+
+// nums = [3,2,4]
+// target = 6
+function twoSums(nums,target){
+
+    let previous = {}
+
+    for(let i = 0; i <nums.length; i++){
+        const current = nums[i]
+        const needed = target - current
+        const index2 = previous[needed]
+        if(index2 != null){
+            return [index2, i]
+        }else{
+            previous[current] = i
+        }
+    }
 
 }
+
+console.log(twoSums(nums,target))
+
+
