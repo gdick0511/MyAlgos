@@ -71,3 +71,61 @@
 // Comparing the  and  elements,  and  so Alice receives two points.
 // The return array is .
 
+// FIRST ATTEMPT:
+
+// function compareTriplets(a, b) {
+//     // Write your code here
+//     let aScoreHolder = []
+//     let bScoreHolder = []
+//     let aPoints = aScoreHolder.length
+//     let bPoints = bScoreHolder.length
+//     let finalScore = [aPoints,bPoints]
+    
+//     for(let i = 0; i < a.length; i++){
+//         if(a[i] > b[i]){
+//             aScoreHolder.push(1)
+//         }else if(a[i] < b[i]){
+//             bScoreHolder.push(1)
+//         }else{
+//             null
+//         }
+//     }
+//     return finalScore
+// }
+
+// PREFERED SOLUTION
+
+function compareTriplets(a, b) {
+    let points = [0, 0];
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > b[i]) {
+            points[0]++;
+        } else if (a[i] != b[i]) {
+            points[1]++;
+        }
+    }
+    return points;
+}
+
+// SOULTION ONE:
+
+// function compareTriplets(a, b) {
+//     const aliceArray = a;
+//     const bobArray = b;
+//     let aliceTotal = 0; 
+//     let bobTotal = 0;
+    
+//     // both arrays have length of 3 so aliceArray.length 
+//     // or bobArray.length will both work
+//     for (let i = 0; i < aliceArray.length; i++) {
+//         if (aliceArray[i] > bobArray[i]) {
+//             aliceTotal++; // alice gets a point
+//         } else if (aliceArray[i] < bobArray[i]) {
+//             bobTotal++; // bob gets a point
+//         } else {
+//             continue; // they both get zero points so skip
+//         }
+//     }
+//     return [aliceTotal, bobTotal];
+// }
+
