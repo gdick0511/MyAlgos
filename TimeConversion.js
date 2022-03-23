@@ -37,6 +37,7 @@
 
 // SOLUTION
 
+
 function timeConversion(s) {
     // Write your code here
     let input = s.split(':');
