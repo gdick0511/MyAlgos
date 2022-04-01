@@ -29,7 +29,7 @@ function twoSums(nums,target){
 
     let previous = {}
 
-    for(let i = 0; i <nums.length; i++){
+    for(let i = 0; i < nums.length; i++){
         const current = nums[i]
         const needed = target - current
         const index2 = previous[needed]
