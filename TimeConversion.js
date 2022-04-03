@@ -38,21 +38,40 @@
 // SOLUTION
 
 
+// function timeConversion(s) {
+//     // Write your code here
+//     let input = s.split(':');
+//     let hours = parseInt(input[0]);
+//     let timeFrame = input[2].slice(2);
+//     let seconds = input[2].slice(0,2);
+//     if ((timeFrame === 'PM') && (hours !== 12)) {
+//         hours += 12;
+//     }
+//     if ((hours === 12) && (timeFrame === 'AM')) {
+//         hours = '00';
+//     } else if (hours < 10) {
+//         hours = '0' + hours.toString();
+//     } else {
+//         hours = hours.toString();
+//     }
+//     return ([hours, input[1], seconds].join(':'));
+// }
+
+// Alternate Solution / Better Solution 
+
 function timeConversion(s) {
     // Write your code here
-    let input = s.split(':');
-    let hours = parseInt(input[0]);
-    let timeFrame = input[2].slice(2);
-    let seconds = input[2].slice(0,2);
-    if ((timeFrame === 'PM') && (hours !== 12)) {
-        hours += 12;
-    }
-    if ((hours === 12) && (timeFrame === 'AM')) {
+    let hours = s.substr(0, 2);
+    let minutes = s.substr(3, 2);
+    let seconds = s.substr(-4, 2);
+    let modifier = s.substr(-2, 2);
+    if (hours === '12') {
         hours = '00';
-    } else if (hours < 10) {
-        hours = '0' + hours.toString();
-    } else {
-        hours = hours.toString();
     }
-    return ([hours, input[1], seconds].join(':'));
+    if (modifier === 'PM') {
+        hours = parseInt(hours, 10) + 12;
+    }
+    let time = `${hours}:${minutes}:${seconds}`;
+    return time;
+
 }

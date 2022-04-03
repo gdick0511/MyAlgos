@@ -44,7 +44,7 @@
 // Sum everything except , the sum is .
 // Hints: Beware of integer overflow! Use 64-bit Integer.
 
-My Solution
+// My Solution
 
 function miniMaxSum(arr) {
     // Write your code here
