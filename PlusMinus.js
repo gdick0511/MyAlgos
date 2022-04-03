@@ -124,3 +124,33 @@ function plusMinus(arr) {
     console.log(negativeValues/divider.toFixed(6))
     console.log(zero/divider.toFixed(6))
 }
+
+// ALTERNATE SOLUTION|
+
+// function plusMinus(arr) {
+//     let positive = arr.filter(number => number > 0).length / arr.length;
+//     let negative = arr.filter(number => number < 0).length / arr.length;;
+//     let zeronums = arr.filter(number => number == 0).length / arr.length;;
+//     return console.log(positive.toFixed(6) + '\n' + negative.toFixed(6) + '\n' + zeronums.toFixed(6))
+// }
+
+// ALTERNATE SOLUTION|
+
+// function plusMinus(arr) {
+//     let positive = 0;
+//     let negative = 0;
+//     let zero = 0;
+//     let len = arr.length;
+//     arr.forEach((item) => {
+//         if (item>0) {
+//             positive++;
+//         } else if (item<0) {
+//             negative++;
+//         } else {
+//             zero ++;
+//         }
+//     })
+//     console.log((positive/len).toFixed(6) + "\n" + (negative/len).toFixed(6) + "\n" + (zero/len).toFixed(6));
+
+// }
+
