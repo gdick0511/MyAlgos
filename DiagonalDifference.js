@@ -75,3 +75,18 @@ function diagonalDifference(arr) {
   }
   return Math.abs(d1 - d2);
 }
+
+// THE BEST SOLUTION 
+
+// function diagonalDifference(arr) {
+   
+//     let num1 = 0
+//     let num2 = 0
+   
+//     arr.forEach((innerArray, i) => {
+//       num1 += innerArray[i]
+//       num2 += innerArray[(arr.length -1) - i]
+//      })
+//     return Math.abs(num1-num2)
+  
+// }
