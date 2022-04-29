@@ -1,7 +1,7 @@
-1) B
-2) A 
-3) D 
-4) D 
+// 1) B
+// 2) A 
+// 3) D 
+// 4) D 
 
 
 5) function listener(){
