@@ -5,8 +5,25 @@
 
 // console.log(rounded)
 
-let yee = '01'
+// let yee = '01'
 
-let answer = parseInt(yee)
+// let answer = parseInt(yee)
 
-console.log(answer)
+// console.log(answer)
+
+
+let string = 'asdfgh'
+
+function blah(string){
+    let answer = {}
+    for(let i = 0; i < string.length; i++){
+        answer[i] = string[i]
+    }
+ 
+    let solution = Object.values(answer)
+
+    console.log(solution)
+    console.log(answer)
+}
+
+console.log(blah(string))
